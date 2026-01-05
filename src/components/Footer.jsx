@@ -19,7 +19,7 @@ export default function Footer() {
                         </p>
                         <div className="flex gap-4">
                             {[Facebook, Twitter, Linkedin, Instagram].map((Icon, idx) => (
-                                <a key={idx} href="#" className="p-2 bg-slate-800 rounded-lg hover:bg-secondary hover:text-white transition-colors">
+                                <a key={idx} href="#" className="p-2 bg-slate-800 rounded-lg hover:bg-secondary hover:text-white transition-colors" aria-label="Social media link">
                                     <Icon size={18} />
                                 </a>
                             ))}

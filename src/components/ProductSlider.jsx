@@ -73,6 +73,7 @@ export default function ProductSlider() {
                             <img
                                 src={product.image}
                                 alt={product.title}
+                                loading="lazy"
                                 className="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-700"
                             />
                             <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors"></div>

@@ -22,13 +22,13 @@ export default function Navbar() {
     const isTransparent = isHome && !scrolled;
 
     const navbarClasses = `fixed w-full z-50 transition-all duration-300 ${isTransparent
-            ? 'bg-gradient-to-b from-black/60 to-transparent py-6'
-            : 'bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100 py-3'
+        ? 'bg-gradient-to-b from-black/60 to-transparent py-6'
+        : 'bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100 py-3'
         }`;
 
     const linkClasses = (path) => `px-4 py-2 rounded-full text-sm font-bold transition-all duration-200 tracking-wide ${isTransparent
-            ? isActive(path) ? 'bg-white text-primary' : 'text-white hover:bg-white/20'
-            : isActive(path) ? 'bg-blue-50 text-primary' : 'text-gray-700 hover:text-primary hover:bg-gray-50'
+        ? isActive(path) ? 'bg-white text-primary' : 'text-white hover:bg-white/20'
+        : isActive(path) ? 'bg-blue-50 text-primary' : 'text-gray-700 hover:text-primary hover:bg-gray-50'
         }`;
 
     const isActive = (path) => location.pathname === path;
@@ -90,6 +90,7 @@ export default function Navbar() {
                     <button
                         className={`lg:hidden p-2 transition-colors focus:outline-none ${isTransparent ? 'text-white' : 'text-gray-600'}`}
                         onClick={() => setIsOpen(!isOpen)}
+                        aria-label="Toggle menu"
                     >
                         {isOpen ? <X size={28} /> : <Menu size={28} />}
                     </button>
@@ -110,7 +111,7 @@ export default function Navbar() {
                 <div className="p-6 flex flex-col h-full">
                     <div className="flex justify-between items-center mb-8">
                         <span className="text-xl font-bold text-primary">Menu</span>
-                        <button onClick={() => setIsOpen(false)} className="text-gray-500 hover:text-red-500">
+                        <button onClick={() => setIsOpen(false)} className="text-gray-500 hover:text-red-500" aria-label="Close menu">
                             <X size={24} />
                         </button>
                     </div>

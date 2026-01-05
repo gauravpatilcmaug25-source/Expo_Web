@@ -5,21 +5,21 @@ import { Link } from 'react-router-dom';
 const slides = [
     {
         id: 1,
-        image: "/hero-ship.png",
+        image: "/hero-ship.webp",
         title: "Premium Indian Agriculture",
         subtitle: "Exporting nature's finest from India's heartlands to the world.",
         cta: "Explore Products"
     },
     {
         id: 2,
-        image: "/slider1.png",
+        image: "/slider1.webp",
         title: "Global Logistics Network",
         subtitle: "Seamless import-export solutions connecting continents.",
         cta: "Our Services"
     },
     {
         id: 3,
-        image: "/image.png", // Container Ship
+        image: "/image.webp", // Container Ship
         title: "Reliable Freight Forwarding",
         subtitle: "Secure, timely, and compliant delivery of your goods.",
         cta: "Get a Quote"
@@ -53,6 +53,8 @@ export default function HeroSlider() {
                     <img
                         src={slide.image}
                         alt={slide.title}
+                        fetchpriority="high"
+                        decoding="async"
                         className="w-full h-full object-cover transform scale-105 transition-transform duration-[10s]"
                     />
 
